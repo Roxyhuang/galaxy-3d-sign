@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-    <meta charset="UTF-8"/>
-    <title>CSS3 animation: Galaxy</title>
-    <link rel="shortcut icon" href="https://gurde.com/wp-content/themes/gurde/favicon.ico"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <!--<link rel="shortcut icon" href="https://gurde.com/wp-content/themes/gurde/favicon.ico"/>-->
     <link type="text/css" rel="stylesheet" href="css/galaxy.css" media="all"/>
 </head>
 <body>
@@ -13,7 +17,34 @@
     <div class="stars-back"></div>
     <div class="stars-middle"></div>
     <div class="stars-front"></div>
-    <div class="bg center"></div>
+    <div class="bg center">
+        <div style="position: relative">
+            <div style="width: 3rem;height: 3rem;background-color: red;border-radius: 50%;margin: 0 auto;position:
+            relative;"></div>
+           <img src="img/user.jpg" style="border-radius: 50%; width: 1.4rem;height: 1.4rem;position: relative;top:
+           .2rem"/>
+            <img src="img/user.jpg" style="border-radius: 50%; width: 1.4rem;height: 1.4rem;position: relative;top:
+           .3rem"/>
+            <img src="img/user.jpg" style="border-radius: 50%; width: 1.4rem;height: 1.4rem;position: relative;top:
+           .4rem"/>
+        </div>
+    </div>
 </div>
 </body>
+<script>
+  (function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 75 * (clientWidth / 750) + 'px';
+        };
+    if (doc.addEventListener) {
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    }
+  })(document, window);
+
+</script>
 </html>
